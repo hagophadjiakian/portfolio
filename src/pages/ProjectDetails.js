@@ -35,20 +35,22 @@ function ProjectDetail() {
   if (project?.id === 2) musicSrc = music2;
   if (project?.id === 3) musicSrc = music3;
 
-  useEffect(() => {
-    if (audioRef.current && musicSrc) {
-      audioRef.current.volume = 0.3;
-      audioRef.current.muted = isMuted;
-      audioRef.current.play().catch(() => {});
-    }
+ useEffect(() => {
+  const audio = audioRef.current;
 
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-      }
-    };
-  }, [musicSrc, isMuted]);
+  if (audio && musicSrc) {
+    audio.volume = 0.3;
+    audio.muted = isMuted;
+    audio.play().catch(() => {});
+  }
+
+  return () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+}, [musicSrc, isMuted])
 
   if (!project) {
     return <div style={{ padding: "2rem", textAlign: "center" }}>Project not found</div>;

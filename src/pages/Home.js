@@ -8,20 +8,20 @@ function Home() {
   const [isMuted, setIsMuted] = useState(false);
   const [animate, setAnimate] = useState(false);
 
-  useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.3;
-      audioRef.current.muted = isMuted;
-      audioRef.current.play().catch(() => {});
-    }
+useEffect(() => {
+  const audio = audioRef.current;
+  if (audio) {
+    audio.volume = 0.3;
+    audio.muted = isMuted;
+    audio.play().catch(() => {});
+  }
 
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause();
-        audioRef.current.currentTime = 0;
-      }
-    };
-  }, []);
+  return () => {
+    if (audio) {
+      audio.pause();
+    }
+  };
+}, [isMuted]);
 
   const toggleMute = () => {
     if (audioRef.current) {
