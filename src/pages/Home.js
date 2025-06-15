@@ -84,16 +84,6 @@ useEffect(() => {
         {isMuted ? '🔈' : '🔊'}
       </button>
 
-      {/* Nav */}
-      <div style={{ marginBottom: "2rem", fontSize: "1rem" }}>
-        <a href="/" style={{ margin: "0 12px", textDecoration: "none", color: "#f76c6c", fontWeight: "bold" }}>Home</a>
-        <a href="/aboutMe" style={{ margin: "0 12px", textDecoration: "none", color: "#f76c6c", fontWeight: "bold" }}>About Me</a>
-        <a href="/projects" style={{ margin: "0 12px", textDecoration: "none", color: "#f76c6c", fontWeight: "bold" }}>Projects</a>
-        <a href="/skills" style={{ margin: "0 12px", textDecoration: "none", color: "#f76c6c", fontWeight: "bold" }}>Skills</a>
-        <a href="/documentation" style={{ margin: "0 12px", textDecoration: "none", color: "#f76c6c", fontWeight: "bold" }}>Documentation</a>
-
-      </div>
-
       {/* Intro Text */}
       <FadeInSection>
         <div
