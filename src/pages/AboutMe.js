@@ -15,7 +15,7 @@ function AboutMe() {
   const audioRef = useRef(null);
   const [isMuted, setIsMuted] = useState(false);
   const [zoomedImage, setZoomedImage] = useState(null);
-  const [isAnyVideoPlaying, setIsAnyVideoPlaying] = useState(false);
+  const [setIsAnyVideoPlaying] = useState(false);
 
   const toggleAudio = () => {
     if (!audioRef.current) return;
