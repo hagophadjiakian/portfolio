@@ -21,7 +21,7 @@ function Documentation() {
       <div style={{ marginBottom: '3rem' }}>
         <h3 style={{ color: '#334e68', marginBottom: '0.5rem' }}>📹 Local Documentation Video</h3>
         <video
-          controls
+          controls preload="none" loading='lazy'
           width="640"
           height="360"
           style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}
