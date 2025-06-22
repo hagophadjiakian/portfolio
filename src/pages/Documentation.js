@@ -21,12 +21,15 @@ function Documentation() {
       <div style={{ marginBottom: '3rem' }}>
         <h3 style={{ color: '#334e68', marginBottom: '0.5rem' }}>📹 Local Documentation Video</h3>
         <video
-          controls preload="none" loading='lazy'
+          controls
+          preload="metadata"
+          playsInline
           width="640"
           height="360"
           style={{ borderRadius: '12px', boxShadow: '0 4px 12px rgba(0,0,0,0.2)' }}
+          poster="/path/to/poster-image.jpg" // Replace with an actual poster image if you have one
         >
-  <source src={ajzVideo} type="video/mp4" />
+          <source src={ajzVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
