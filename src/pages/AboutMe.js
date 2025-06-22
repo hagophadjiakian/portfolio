@@ -131,7 +131,7 @@ function AboutMe() {
       <div style={{ marginTop: '2.5rem' }}>
         <video
           src={graduation}
-          controls
+          controls preload="none" loading='lazy'
           width="640"
           height="360"
           onPlay={() => handleVideoPlayPause(true)}
@@ -204,7 +204,7 @@ function AboutMe() {
           src={japanVideo}
           width="90%"
           height="auto"
-          controls
+          controls preload="none" loading='lazy'
           onPlay={() => handleVideoPlayPause(true)}
           onPause={() => handleVideoPlayPause(false)}
           style={{
@@ -254,7 +254,7 @@ function AboutMe() {
       src={vid.src}
       width="600"
       height="300"
-      controls
+      controls preload="none" loading='lazy'
       onPlay={() => handleVideoPlayPause(true)}
       onPause={() => handleVideoPlayPause(false)}
       style={{
